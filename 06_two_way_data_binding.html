@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Vue App</title>
+  <title>two-way-data-binding</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
-    {{ message }}
+    <input type="text" v-model='message' name="text_input" id="text_input">
+    <h1>{{ message }}</h1>
   </div>
-
+  
   <script>
     var app = new Vue({
       el: '#app',
-      data:{
-        message: 'Hello World'
+      data: {
+          message: ""    
       }
     })
   </script>
 </body>
-</html> 
+</html>
