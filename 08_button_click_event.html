@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count app</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="count++">Increment</button>
+      <button @click="count--">Deccrement</button>
+      <h1>{{count}}</h1>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          count: 0
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>checkboxes-display</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="checkbox" value="Menu 1" v-model="menus">
+    <label>Menu 1</label>
+    <input type="checkbox" value="Menu 2" v-model="menus">
+    <label>Menu 2</label>
+    <input type="checkbox" value="Menu 3" v-model="menus">
+    <label>Menu 3</label>
+    <h1>{{ menus }}</h1>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+          menus: []
+      }
+    })
+  </script>
+</body>
+</html>

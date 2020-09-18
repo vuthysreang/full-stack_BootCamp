@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change-Style App</title>
+  <script src="https://unpkg.com/vue"></script>
+
+  <style>
+    .active {
+      color: blue;
+      font-size: 40px;
+    }
+    .notactive {
+      color: red;
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div id="app">
+    <div @mouseover="mouseOver" @mouseleave="mouseLeave" :class="{active: isActive, notactive: !isActive}">
+      {{ message }}
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World',
+        isActive: false,
+      },
+      methods: {
+        mouseOver: function() {
+          this.isActive = !this.isActive;
+        },
+        mouseLeave: function() {
+          this.isActive = !this.isActive;
+        }
+
+  }
+    })
+  </script>
+
+</body>
+</html>
+

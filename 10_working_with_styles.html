@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change-Style App</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <h1 v-bind:style='mystyle1' @mouseover='changeStyle' @mouseleave = 'originalStyle' style='width: fit-content;'>
+      {{ message }}
+    </h1>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World',
+        mystyle1: {
+          color: 'blue',
+          fontSize: '30px'
+        }
+        },
+      methods: {
+        changeStyle: function() {
+          this.mystyle1.color = 'green';
+          this.mystyle1.fontSize = '50px';
+        },
+        originalStyle: function() {
+          this.mystyle1.color = 'blue';
+          this.mystyle1.fontSize = '30px';
+        }
+
+      }
+      
+    })
+  </script>
+</body>
+</html> 
