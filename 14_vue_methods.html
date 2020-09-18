@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>two-way-data-binding</title>
+  <title>Method App</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
-    <form>
-      <input type="text" v-model='message' name="message" id="message">
-      <h1>{{ message }}</h1>
-    </form>
+    <button type="button" @click = 'helloMethod()'>
+      click here
+    </button>
   </div>
-  
+
   <script>
     var app = new Vue({
       el: '#app',
-      data: {
-          message: ""   
+      methods: {
+        helloMethod: () => {
+          console.log('Hello from the Vue method')
+        }
       }
     })
   </script>
 </body>
-</html>
+</html> 

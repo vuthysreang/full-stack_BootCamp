@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop App</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <table>
+      <ol>
+        <li v-for="item in table_details">{{ item }}</li>
+      </ol>
+    </table>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        table_details: [
+          {
+            id: 1, 
+            name: 'Vuthy', 
+            age: 21
+          },
+          {
+            id: 2, 
+            name: 'Zevo', 
+            age: 21
+          },
+          {
+            id: 3, 
+            name: 'Pisey', 
+            age: 20
+          },
+          {
+            id: 4, 
+            name: 'Bob', 
+            age: 22
+          },
+          {
+            id: 5, 
+            name: 'Phanha', 
+            age: 23
+          }
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

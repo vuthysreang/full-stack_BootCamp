@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>two-way-data-binding</title>
+  <title>Computed App</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
-    <form>
-      <input type="text" v-model='message' name="message" id="message">
-      <h1>{{ message }}</h1>
-    </form>
+    <!-- <button type="button" @click="computedName">
+      click here
+    </button> -->
+    {{computedName}}
   </div>
-  
+
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-          message: ""   
-      }
-    })
+        name: 'Vuthy',
+      },
+      computed: {
+        computedName: () => {
+          console.log('')
+        }
+      },
+    });
   </script>
 </body>
-</html>
+</html> 
