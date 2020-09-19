@@ -21,7 +21,18 @@
           console.log('Hello from the Vue method')
         }
       }
-    })
+    });
+
+    /* - A Vue method is a function associated with the Vue instance. 
+       - Methods are defined inside the `methods` property.
+       - When to use METHODS
+          -> To call a function when an event happen in the DOM
+          -> To call a function from the computed or watchers when something happens in our component.
+          -> we need to pass parameters
+          --> Methods are especially useful when we need to perform an action and we attach a v-on directive on an element to handle events.
+       - so every time an event occurs, that method is called.
+       - We can access any of the data properties of the Vue component by using this.propertyName:
+    */
   </script>
 </body>
 </html> 

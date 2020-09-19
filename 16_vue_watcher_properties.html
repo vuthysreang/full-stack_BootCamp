@@ -22,7 +22,16 @@
           console.log('Status Change to: ', statusChange)
         }
       }
-    })
+    });
+    /* 
+      - A Vue watcher allows we to listen to the component data and run whenever a particular property changes
+      - We can do so by adding to the watch object a property named as the data property we want to watch over:
+      - Basically, if we need to perform some an additional action when a property changes, watchers are the way to go.
+        Some use cases are:
+          -> Observing a value until it reaches a specific value    
+          -> Making an asynchronous API call when a value changes
+          -> We don’t need to combine existing data into a new property
+    */
   </script>
 </body>
 </html> 

@@ -29,7 +29,18 @@
           console.log(this.computedName)
         }
       }
-    })
+    });
+    
+    /* 
+      - Vue Computed properties are like methods but with some difference in comparison to methods.
+      - When to use COMPUTED PROPERTIES
+          -> need to compose new data from existing data sources
+          -> need to reference a value directly in your template
+          ->call the same function more than once in your template
+      - Vue computed property is a property that calculates and returns a value, rather than just store it.
+      - A computed property is used to declaratively describe a value that depends on other values. 
+        When we data-bind to a computed property inside the template, Vue knows when to update the DOM when any of the values depended upon by the computed property has changed.
+    */
   </script>
 </body>
 </html> 
