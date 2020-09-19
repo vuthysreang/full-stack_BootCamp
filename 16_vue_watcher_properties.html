@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MouseHover-Reverse App</title>
+  <title>Watcher App</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
-    <h1 @mouseover="reverse_text" @mouseleave="reverse_text" style="width: fit-content;">
-      {{message}}
-    </h1>
+    {{ watchStatus }}
   </div>
 
   <script>
     var app = new Vue({
       el: '#app',
-      data:{
-        message: 'Hello World'
+      data: {
+        status: false
       },
-      methods: {
-        reverse_text: function(){
-          this.message = this.message.split('').reverse().join('')
-        },
+      watch: {
+        watchStatus: function(changeStatus) {
+          changeStatus: this.status = true;
+          console.log('changeStatus:', changeStatus)
+        }
       }
     })
   </script>
