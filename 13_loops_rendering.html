@@ -10,7 +10,7 @@
   <div id="app">
     <table>
       <ol>
-        <li v-for="item in table_details">{{ item }}</li>
+        <li v-for="item in table_details" ::key="item.id">{{ item }}</li>
       </ol>
     </table>
   </div>

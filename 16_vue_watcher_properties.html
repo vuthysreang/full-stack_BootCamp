@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="app">
-    {{ watchStatus }}
+    {{ status }}
   </div>
 
   <script>
@@ -18,9 +18,8 @@
         status: false
       },
       watch: {
-        watchStatus: function(changeStatus) {
-          changeStatus: this.status = true;
-          console.log('changeStatus:', changeStatus)
+        status: function(statusChange) {
+          console.log('Status Change to: ', statusChange)
         }
       }
     })

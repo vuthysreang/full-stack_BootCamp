@@ -10,7 +10,9 @@
   <div id="app">
     <form>
       <input v-model="name" type="text" name="name" id="name" placeholder="Enter your name here">
-      <h1 v-if="name === 'Vuthy' && isActive" :style='{color: welcomeColor}'>Access Granted welcome Mr/Ms.{{ name }}</h1>
+      <h1 v-if="name === 'Vuthy' && isActive" :style='{color: welcomeColor}'>
+        Access Granted welcome Mr/Ms.{{ name }}
+      </h1>
       <h1 v-else :style='{color: deniedColor}'>Access Denied Sorry Mr/Ms.{{ name }}</h1>
     </form>
     

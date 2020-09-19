@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue-Component App</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <kit></kit>
+  </div>
+
+  <script>
+    Vue.component('kit', {
+      template: `<h1> {{ schoolName }} <button v-on:click="getAscii">Get Ascii Value</button> </h1>`,
+      data: function(){
+        return {
+          schoolName: "Kirirom Institute of Technology", 
+        }
+      },
+      methods: {
+        getAscii: function(){
+          sum = 0
+          for (i = 0; i < this.schoolName.length; i++){
+            sum += this.schoolName.charCodeAt(i)
+          }
+          return this.schoolName = sum
+        }
+      }
+    });
+
+    var app = new Vue({
+      el: '#app'
+    });
+  </script>
+
+</body>
+</html>

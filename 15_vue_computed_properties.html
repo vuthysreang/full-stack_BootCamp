@@ -8,8 +8,8 @@
 </head>
 <body>
   <div id="app">
-    <button type="button" @click="computedName">
-      click here
+    <button type="button" @click="callComputedName()">
+      Reverse Name
     </button>
   </div>
 
@@ -20,10 +20,15 @@
         name: 'Vuthy',
       },
       computed: {
-        computedName: () => {
-          console.log('ajfslaj')
+        computedName: function() {
+          return this.Name = this.name.split('').reverse().join('')
         }
       },
+      methods: {
+        callComputedName: function() {
+          console.log(this.computedName)
+        }
+      }
     })
   </script>
 </body>

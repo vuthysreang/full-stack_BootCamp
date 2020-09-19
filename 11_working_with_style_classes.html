@@ -21,7 +21,12 @@
 <body>
   
   <div id="app">
-    <div @mouseover="mouseOver" @mouseleave="mouseLeave" :class="{active : isActive,  notactive : !isActive}" style="width: fit-content;">
+    <div 
+      @mouseover="mouseOver" 
+      @mouseleave="mouseLeave" 
+      :class="{active : isActive,  notactive : !isActive}" 
+      style="width: fit-content;"
+    >
       {{ message }}
     </div>
   </div>
@@ -36,7 +41,6 @@
       methods: {
         mouseOver: function() {
           this.isActive = !this.isActive;
-          console.log(this.isActive)
         },
         mouseLeave: function() {
           this.isActive = !this.isActive;

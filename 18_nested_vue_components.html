@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue-Nested-Component App</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <inner></inner>
+  </div>
+
+  <script>
+    Vue.component('inner', {
+      template: `
+        <div>
+          <ol>
+            <outer v-for='item in studentDetails' :key="item.id"> {{ item.name }} </outer>
+          </ol>
+        </div>
+      `,
+      data() {
+        return {
+          studentDetails: [
+            {id: 1, name: 'Vuthy', age: 21},
+            {id: 2, name: 'Sokmeng', age: 21},
+            {id: 3, name: 'Moonlight', age: 21},
+            {id: 4, name: 'Dara', age: 21},
+            {id: 5, name: 'Tola', age: 21},
+          ] 
+        }
+      }
+    });
+    
+    Vue.component('outer', {
+      template: `
+        <li>
+          <slot>
+          </slot>
+        </li>
+      `,
+    })
+
+    var app = new Vue({
+      el: '#app',
+    })
+  </script>
+
+</body>
+</html>
