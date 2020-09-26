@@ -1,0 +1,11 @@
+{
+  "name": "backend_api_expressjs_mongodb",
+  "version": "1.0.0",
+  "description": "Learn to create REST API using express.js with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vuthy_Sreang",
+  "license": "ISC"
+}
