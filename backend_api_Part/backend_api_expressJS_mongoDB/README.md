@@ -16,6 +16,13 @@
     Install devDependencies
         ==> nodemon: is a tool that helps develop node. js based applications by automatically restarting the node application when file
             changes in the directory are detected. nodemon does not require any additional changes to your code or method of development
-            nodemon is a replacement wrapper for node .
+            nodemon is a replacement wrapper for node.
 
 
+#### What is middleware?
+    ==> Middleware functions are functions that have access to the request object ( req ), the response object ( res ), and the next
+        function in the application's request-response cycle. The next function is a function in the Express router which, when invoked
+        executes the middleware succeeding the current middleware.
+
+
+####  
